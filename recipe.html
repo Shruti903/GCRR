@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #6f4159;
+            color: #e3d4dd;
+            text-align: center;
+        }
+        .header {
+            background-color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            color: #6f4159;
+            font-weight: bold;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .nav a[href="#home"] {
+            cursor: pointer;
+        }
+        .search {
+            font-size: 18px;
+            color: #6f4159;
+        }
+        .content {
+            padding: 60px 20px;
+        }
+        .content h1 {
+            font-size: 48px;
+            color: white;
+        }
+        .content p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            color: black;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .recipe-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .recipe-card p {
+            font-size: 14px;
+            color: gray;
+        }
+        .view-all {
+            background-color: #8b5d76;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">Flour <span style="font-style: italic;">and</span> Fire</div>
+        <div class="nav">
+            <a href="/">HOME</a>
+            <a href="/aboutus">ABOUT US</a>
+            <a href="/recipe">RECIPE</a>
+            <a href="/starthere">START HERE</a>
+
+            
+        </div>
+        <div class="search">🔍</div>
+    </div>
+    <div class="content">
+        <!-- <p>FLOUR AND FIRE &gt; RECIPES</p> -->
+        <p>FLOUR AND FIRE</p> 
+        <h1>Recipes</h1>
+        <p>We've organized these recipes every way we could think of so you don't have to! Dietary restrictions, weeknight dinners, meal prep recipes, some of our most tried-and-true... no matter how you browse, we're sure you'll find just what you were looking for.</p>
+    </div>
+    <div class="recipes">
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//89643ed77ed8428b/mae-mu-kID9sxbJ3BQ-unsplash.jpg?Expires=1835516436&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=NEcBrkqm~x5SL2mOYGSTKLHiQAHH~3skepUgmMUUw~TySexCDF1huaH3HESCDKBSZpogDvAWU9vJ5tfmfHYYBqCUvZAbh1oPAlNE697qN1-QblI8~0QBvZyrzLHnhjO9AzdVjnnrrCOve1fi7nxHxWeS061PHeQnSZhk0klGFMbWWC9du66KPYXPMbrkdlBObAPFMj2YF9iRpuK98gu3XcQT5rBmPzKHAo5LnUppLYCnJEplPZENn3Q3Wckf5c8BPSgfb7xp6VBP8I4ITphLlu6quTBh4Xn2gwHJ-fJubAu8rA3lwr6TRtxjGi~ncPFmh771xtvegMZPA7sDY9uPAA__" alt="Chocolate Chip Cookies">
+            <h3>The Best Soft Chocolate Chip Cookies</h3>
+            <p>⭐⭐⭐⭐⭐ 1854 Reviews / 4.6 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//e86f8537e79f496f/aliona-gumeniuk-AOQ83RPea60-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MTNZsW33BQvaYS1OPXFZXMY~UlOGi09eR9OxpnovYzl6lCIDEk7WqGISZ8RFIUNqLMBzl6BJSIsmUu4ELpHTjzQG-~fF8XUhc2KYCMjM0SJ4-c44AiHPjb7ZabjLzJjN20~i1e8rR2bQNv-7NgB0kfYug8KYAfrs3-GhwPz4zK5quATeTHBLyp9moRaxIWENgbsefv9hJV5cKwaSG5bxbLIW0DkGOHOnUQT~YUATLCdLO-alB2M7Hq~gIdhAbtktNRHc~qe395~dZGQSot4o1FAdIA46DlHFJhrzX01xfNsVLSOWLuZglDA3UMxwwhx3-4GSF7AvYCaJWtVyHwzBhA__" alt="Sunday Chili">
+            <h3>The Best Sunday Chili</h3>
+            <p>⭐⭐⭐⭐⭐ 115 Reviews / 4.9 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//9dc5db9cbbd74690/jude-infantini-rYOqbTcGp1c-unsplash.jpg?Expires=1835516839&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=EVPXyz6Z3ozSvwucitWaeiUd2vF1jk4yGGn-LnRrDYqjgV9JATsiNZd3~8Pe5VJdE0k8eMIxptcq9LVu0Y9ztRB5Q-WEZxIUopjgXaOi6lc-TVPbL5uWDQTH5Fw1MhyN9w5CWiLD~uh41yW64gNzsC1L9J3NBjusv2i0K~dPFZ6~X-jzgn4K~gTpPxx9cB9NSsdXQ8lQpIns14DMjssWGiCnqMIdO0I~ZVAdNXfP4MrJgDYBkHuz8Dka4sU2ZUniufnnP3~BsiLSHo7s3qD5ta~vWYIa-hKNv6Chb3kJ6WpcBwkTKGelMOFl37330lOJm7o8yB0glD3vgqXY9Xp-UQ__" alt="No Knead Bread">
+            <h3>Miracle No Knead Bread</h3>
+            <p>⭐⭐⭐⭐⭐ 574 Reviews / 4.8 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//a709e1d46d8d402e/emiliano-vittoriosi-OFismyezPnY-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=c725qy7tMG6Hyue8y0VxaXHrTpydKIf5WJDzbjtIIbmNY4O8JDlD87Xd8ULpiUY2l3JA12bKW4DcpGLuC3Bz0TzAW7lzUP~0PEka5FX8sHPswrzw8U4rfMoLnE2Ab2tptM56AQIxUA9QQhClr3A5D8--KIiKv1P-LljEIXE9hVFy4tDvoQG680wqLWWzYPJJkIkFhrYDlBYO9f6MXY91oMXxRJGdePcTDMmtAAHhUXz-ceZtLboXzh9uMIIReEB676Ls5CrZitQpRiVIr0VrEIHdcacEt5-CbTqQb9EVMOeeWtv19dIouE6ZWPNDMImb0c2TJ0-uSaUwxPBNRQouzw__" alt="Baked Chicken Meatballs">
+            <h3>Best Anytime Baked Chicken Meatballs</h3>
+            <p>⭐⭐⭐⭐⭐ 731 Reviews / 4.9 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//f9c3f59fe25f46da/christine-siracusa-vzX2rgUbQXM-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=n0BGjMnobFVGpuucbVVPHaqBnIhXMr-RtUMfagCw-3zbQ3A6F257C3~aT~2065oVrsWRfZSiqGmYGyAc2OFM61q10mzfQPC9Sun7ZykAXrHsk3rN-LugoJxjZPOBWIbW5nQ51oC3So8nVqndZR3GXnj3CxHs0VRwfY7E6JzwF5Jkd3wJVvjji4lHD59mfexAVXk2JXUdYiT7wBOnpXavyJVW44jEHXucWT~wD72fvp171JgrMN6jisvtxlOH-cKKnjroEV8hJku-gMcB~zRcNMOR1BbRH1Db7eaCXt6cJLwTN~CiFTqxs80dv9Gog5al9CmjB0pGHQvbu1NmL6A-ng__" alt="Chicken Tinga Tacos">
+            <h3>The Best Chicken Tinga Tacos</h3>
+            <p>⭐⭐⭐⭐⭐ 185 Reviews / 4.9 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//cce29cdcc5b94a1f/alex-bayev-Yp9y0UsldVA-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xTe1UlyPksQ5U8gCyKpW9vKBMKS-mNvvMTxyb2ZJuv4Fs0jKALYYMoqV26-qqA5RvkljN~3gcdFWCPjIqXwI~MgXIla~oLVNduwgh5caJN2CWY~bG-T-uFpVZJPGHZldXfeEdGnBshZCXfBYRZorc5uLbYHFFAczcrIkXpfnWFaAfL9TU2PUX-sVSJ0asog2LoxAPB-9J5E5vmAnCpM3lytXL~f-ABi34qXy6LAEraXrCfd3OPENIwEq4TXTedBkV~28~OV1SEsFuX7NAl208X8xqEZHZwxrorVMHCA0t-jU06hYWl5jmp1h~6XEoR-0HPGnG-BjrDyZshkLowwkUw__" alt="Detox Crockpot Lentil Soup">
+            <h3>The Best Detox Crockpot Lentil Soup</h3>
+            <p>⭐⭐⭐⭐⭐ 373 Reviews / 4.8 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//eec2ffdcfc4c4d95/priscilla-du-preez-0KMpOEdqkJE-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Zz7rpAAkdBzC16UIclqBWxWW3JMz7PHMslQFu33JMAwVIBA2p~LPu~EVN90ifhDLKovNDNtKAjU6ewumk8Tz0ssF6jaW6VmtX~aI8f1QivZLEOIParjjKJzZQKScsFD9G3nEsgNut1lcgfvutUWXGJcWcbl9o9geVBomt96mA5dRsvZ8s3E-aRo2Y3B095w~ibL7u-QQoeMEYKDiV~A1Xi1tfgthinejnwVQy6jNQUSId-CE0i4QEeNJw5dJIP9zX8kv8FBDZKH8zkHGLsdCiTEHLx91JD6S3YquuEJsQyIZeZarMvSVaSbFt9ezx4Ovq~4r2SluJ~yrfXGOv8XO6Q__" alt="Vegetarian Shepherd’s Pie">
+            <h3>Vegetarian Shepherd’s Pie</h3>
+            <p>⭐⭐⭐⭐⭐ 397 Reviews / 4.8 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//602d96e21ee94489/joshua-hoehne-jygIUV9VHlw-unsplash.jpg?Expires=1835516850&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=R9krifqkgleZRIxrb26lXoL9bDUxBlHZTAfeWebQcjLVkjckwyS2SHgMJFn3YpgR1unYrBWvXKhohxhNr-MV0LmF1PiafnINMwsJkiOYF47LXJWzunt7F7VrTJ32WFN6buUwQ~52gSabzNXuh31aiPuGI00hjYflDV95sN3EfaAqoq9Mdt7XZaCRdooeKadWIiv7R4xvma8quGtHcg9L9S~uhqeRI04gajCMAXCzqAq393IM~TaZIfXYl2-Q1ou686TAukSnFL-X0P1DSY1KdZ11A4l1O5NnRoU0PZbjVob5Y2yFdxOTHjP6t-s1YIImw7lVN43UdVxO3~6SFbF~Nw__" alt="Fruit Pizza">
+            <h3>Fruit Pizza</h3>
+            <p>⭐⭐⭐⭐⭐ 67 Reviews / 4.8 Average</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://media-hosting.imagekit.io//07da9dc96e6841e7/mae-mu-TkzdkVn1AyA-unsplash.jpg?Expires=1835516601&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vO3qGiJeCAxWxDAoONmxC4YhW11S4Xc1WYJcp2jP4e2XY7VBKS9komyDQKsqTpvVF5o8gaMh8IF8PbhZZM53WpvNMjy97HbuIxiNYmJyb21Uc2Gh4gZELZKGnhlzduSZHDuchTm9mjl0NSocGNaz4~E6lDCHnZzlfb13Qm9rvQ6lUpHz1bajVCs-fDHWZs463I4ibq0ZHPal3TRWQ8JFPU4EEQFnegdkloirUdeFu6RqvZt3kDmlW2WB2Gm15ecKqOu9w0AWrYXVT0~8wXHb91q8UGbJSxYPEHJBoZhnO6J70-8oiIS5M4d0twA2uswAR72nZSxcKkwkKPl9KTrEKQ__" alt="Blueberry Pancakes">
+            <h3>Fluffiest Blueberry Pancakes</h3>
+            <p>⭐⭐⭐⭐⭐ 353 Reviews / 4.8 Average</p>
+        </div>
+    </div>
+    <a href="/viewall"><button class="view-all">+ VIEW ALL RECIPES</button></a>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flour and Flower - About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* Reflection Effect */
+    -webkit-box-reflect: below 10px 
+        linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            color: #4d2c3d;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #4d2c3d;
+        }
+        .italic-text {
+            font-style: italic;
+            color: gray;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        /* Follow Us Section */
+        .follow-signup-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .follow-us {
+            display: flex;
+            align-items: center;
+        }
+        .follow-us p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4d2c3d;
+            margin-right: 15px;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #703D57;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-icons a img {
+            width: 20px;
+            height: 20px;
+            filter: invert(100%);
+        }
+        /* Signup Form */
+        .signup-form {
+            display: flex;
+            align-items: center;
+        }
+        .signup-text {
+            font-size: 20px;
+            font-style: italic;
+            color: gray;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .signup-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            width: 200px;
+        }
+        .signup-form button {
+            background-color: #E4B34B;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .social-icons {
+    display: flex;
+    gap: 10px; /* Adds space between icons */
+}
+.top-banner {
+            background: #6d4254;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .top-banner a {
+            color: #ffd700;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-banner" id="topBanner">
+        ❤️ OUR RECIPES, YOUR INBOX. <a href="#">SIGN UP</a>
+        <button class="close-btn" onclick="document.getElementById('topBanner').style.display='none'">💌</button>
+    </div>
+    
+
+    <!-- About Us Section -->
+    <div class="container">
+        <div class="image-section">
+            <img src="https://media-hosting.imagekit.io//a956002a93544d5f/ben-lei-flFd8L7_B3g-unsplash.jpg?Expires=1835453997&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mBpDKOXkNxQKPJhvsBN2Tm2BRRFA6eyGdQD5LK8Nof46XS4q2WUxsoYKDpnFUIdsIK5A-G-f1KMZcFL5QWRubK43F-CAFIdkmytCHHIv3fkw5TdQJ-TkTsLLyBHcq1jVw7Uc4965l3n-FlSDFiwtzrg5Y5by9fWuE2I2QjWJ-8Xn8fZ7C8CS4F69t-Vj2VLHrE30Zxk2VB7X5PhS96hYjYyvcvRd4otuLuuGl4XLuPlkVKZVnPa-iVvcwO1lHrXtyWsGOzZRbiKAo2IeBrpAO4G~eIJ6rSf~HGPQWK7lJnn4qmdKw4dRU1JVplEzCqt3FOyMoQABTJnlgliFEOYllg__" alt="Delicious pasta dish">
+        </div>
+        <div class="text-section">
+            <h1>Welcome to Flour and Fire</h1>
+            <p class="bold-text">LET’S TALK FOOD <span class="italic-text">shall we?</span></p>
+            <p>Well, we hope that’s why you’re here. Our recipes are designed for real, actual, everyday life, 
+               and we try to focus on real foods and healthy recipes (which honestly means a lot of different 
+               things to us, including the perfect chocolate chip cookie and cheese on cheese on cheese, 
+               because health is all about balance, right?).</p>
+            <p>This is the place to find those recipes — everything from our most popular, to meal prep, 
+               to Instant Pot recipes, or if you just, like, have some sad greens in your fridge to use up and 
+               you need some inspiration.</p>
+            <p>You’re here! Have fun. We hope you find something (many things) you love.</p>
+        </div>
+    </div>
+
+    <!-- Follow Us & Signup Section -->
+    <div class="follow-signup-container">
+        <!-- Follow Us -->
+        <div class="follow-us">
+            <p>FOLLOW US</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://media-hosting.imagekit.io//5ffa5ffabb84473c/screenshot_1740846100334.png?Expires=1835454103&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=l1Nj8RtWBWGQdses-c0M~BOvRYI12pwIeKqSlvTIy5VUtMqseb7BRjWgX~62SIuRuDSKJFyOkW86tQPGhJLav6KDk1l3zZgPGJjx1XIKTLREdMuZvcvvLkI6XBbDyu--a4yPjo5v2lcNh0qyiQlodoXDivC9c4OblFNjZ1zlo3hP9FvpG8U8smhpuZPxUBjsTNi2Ow~CBgHnXoLGlRFUnnkLfr5oSIMWJhC70oEU6a-SfCtbu83wbt~nRcxpwBbv7SpmcJRTMoBr~jIikVHQ-UAvi4wjGGCtoZ8tPAfS~Hnd1aY0Pvss7yinbeiW2cmx4Y8vBXcpKH0x4zP7WLaPiQ__" alt="Instagram"></a>
+                <a href="#"><img src="https://media-hosting.imagekit.io//3ed4fbfe97924cff/screenshot_1740846481373.png?Expires=1835454484&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=A11ckWuNvgpnMYKd5wwMeGg0o51TfTki~sExfIdpnvANFLtPHQ31l7ICigyZ85sa-YDmufiwxW4zQ23nIG5I7KbbIwWsAQiYXY~chrpnVuJuieFQ1pMs51r0gdPmNwZKIPsJwwxIlHWGk3rwHbkIP2sCC3wyOwmuuJmEsyoU9a91azp8VjfbqHhnk1h~VQj9xwF2~XMhk5gTAdzBF~WBYGXje7u6yZN21s7sYCyULuAq448LEfQBxs8FwC82Or5c6-NgPG2KhX7A3AFOtnv~UIcHE0KukMCxjzoGJpelgS7I4QviGbXEp2HN9NmrKSceeXdQiHgW1NiIjmunyUb8Yw__" alt="Pinterest"></a>
+                <a href="#"><img src="https://media-hosting.imagekit.io//36cb62739a614b86/screenshot_1740846529409.png?Expires=1835454532&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UZg55SZ9xDkWIIg9bmkHRM7jmC3KeiMDVFknwqhmnZz4c0P7FtFfR72S1ek5xYi8Pp0W0Zm83~qqAveFXKamZjMcbYxyVkTDh~KHt4t7ifw9Alg6990PZqZF7IEUPnBmNIdD~w1LkCjSmRX0G1BOMsrxrvRRsFyLf~~Imoq2blSf4pU8ct0em6GUxb1vqRLzpuLLerE6eBiPm-knmuthXk6d2nHEfQIMIACzr65z4-kJ2OzGbEvt5FTVYyGVSBMwmi6wFNaDekFdXcrOjjnnVckpB7R4Pi7SwRhz4AU6JorSImsBYp5UwjquxehBAZC-tmxomlFnDguN1YhI8bJk7g__" alt="Facebook"></a>
+                <a href="#"><img src="https://media-hosting.imagekit.io//b208c939f8aa47d5/screenshot_1740846990080.png?Expires=1835454993&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KkznW-zt2FTjfwNt~wNyO1o4EvnGeuZklNv6Nnf8XxN5Fya4UI8nKZsmK5Xo6wcrTXbfc8LiGh9Ze8Q-Q8ELJYeAmMO82Zh-lB2o2wXT4TGf4jpOTfWjpRbvkv9d8nJ7lXEeXOqdqsmCWBQ79g7XnR8dfRAvvUWbtXd3HUhMeFWoZ6ZR2HXtSXawpUehrJ31WI4R3vAV3C~tEVwJt0kX0CCNF8m4yEu0enaL9CgO1FVUKQMIZAOKIfd0BPHT8AHzO-B90ugj59fVM-9-buZznqy3fO6OzQKSKUYa-~WYNGL2DDi3t0H1~hgCZ3MjlpzHfsNkoALygpeMKin7dv8PtA__" alt="Twitter"></a>
+            </div>
+        </div>
+        <!-- Signup Form -->
+        <div class="signup-form">
+            <span class="signup-text">signup</span> 
+            <span style="font-weight: bold;">FOR EMAIL UPDATES</span>
+            <input type="text" placeholder="First Name">
+            <input type="email" placeholder="Email">
+            <button>GO</button>
+        </div>
+        <!-- Back Button -->
+<div style="text-align: center; margin: 30px;">
+    <a href="/" style="text-decoration: none; background-color: #703D57; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block;">
+        ← Back
+    </a>
+</div>
+
+    </div>
+
+</body>
+</html>

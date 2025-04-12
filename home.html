@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Gallery</title>
+    <style>
+        /* Reset and General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f8f8;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: #6d4254;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .top-banner a {
+            color: #ffd700;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        /* Header / Navbar */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-family: 'Georgia', serif;
+            color: #6d4254;
+            font-weight: bold;
+        }
+
+        .logo span {
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .subtitle span {
+            font-style: italic;
+            color: #6d4254;
+        }
+
+        /* Gallery */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Recipe Categories Section */
+        .recipe-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+        }
+
+        .category {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: black;
+        }
+
+        .category img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .category img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Search Bar */
+        .search-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            gap: 15px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 2px solid #6d4254;
+            padding: 8px;
+            border-radius: 5px;
+            width: 300px;
+            background: white;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .search-bar span {
+            margin-right: 10px;
+            color: #6d4254;
+            font-size: 16px;
+        }
+
+        .view-all-btn {
+            background: #6d4254;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .search-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner" id="topBanner">
+        ❤️ OUR RECIPES, YOUR INBOX. <a href="#">SIGN UP</a>
+        <button class="close-btn" onclick="document.getElementById('topBanner').style.display='none'">✖</button>
+    </div>
+
+
+    <!-- Navbar -->
+    <div class="header">
+        <div class="logo">Flour<span>and</span>Fire</div>
+        <div class="nav-links">
+            <a href="/">HOME</a>
+            <a href="/starthere">START HERE</a>
+            <a href="/recipe">RECIPE</a>
+            <a href="/aboutus">ABOUT US</a>
+           
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="subtitle">SIMPLE RECIPES MADE FOR <span>real, actual, everyday life.</span></div>
+
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+        <img src="https://media-hosting.imagekit.io//1c53b09e90984862/butterchicken.png?Expires=1833557747&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=01JLvNkhyFrNyM6JmFrP7BbmTVg2RMmh9OJrpeWmOkQVrf2gx8pzqA7e1oN3WdnysxRuMinQlXWVEgi1~c7zP0xs4Y4e5VphH1FJoc7pcfNjoUrBwif9FMxKZDdCbKeP1-1bP5WgKaVsFsrsysCwTIf-qshAZGQtpEXIyzoWw-0GTYmyddH1Sr5ktws-vOZrIYOFnCH6Q6XiEYSmGhkTrqX0GRxA8RWCKknEy2pee8sKp7n1ne1zvXTvIu68ZzDNDijlewugiGrUOcO-7a2MZNi-qO79wPYxMMTdhhrwTI7riD~xppoN8822KE18cFVTBl765MHqHg85G8FEw5-cLw__" alt="Butter Chicken">
+        <img src="https://media-hosting.imagekit.io//4e807a5e1ec2414d/sushi.png?Expires=1833557854&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wGrSHPugEty~rhyTRsQPgaewni4h8y8qIni13JKASBS0amt0DpYzYGDiXCfCiL8Hb0I00d1F45qIasgXPwo8UGZIyxzz0OdoieKE~gLjk-Rrc4hJ3x41EzNkXa0vB98YxxMyVaMyfTbVYaQ4LtNY78S~c2ckQkGue43O24uTPqksNbaVQQBrETSQCOps1BCHj1nkExSi7UWARpmOEhbNK-wFc9nCAjpps08~NwzrABvDYybheJAwqtrWR-lYE5QPEx0blBHVjRjQ5sYgHON6GuMtSe4ARFIByBZHLWorT-pi~8LTybeHuDa8dFRlnbLdra2ZihotzWoNtG5buWbwVg__" alt="Sushi">
+        <img src="https://media-hosting.imagekit.io//49a99fb290364e09/tacos.png?Expires=1833557924&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bXqJil4C0XfKXagrj3aKQyz6TxxzhEpEKCn94OQaG0y5tY14z8t7h2IRyvGvor5LgWpgR528TA6yozmybgYuzJmfrsta-wQHCt1MsDzy9sOfyubySj5gXhlNjhI7dMfwGAHKXKEhCRiNCmmo9Blr1uvFg0DJ~qdh~FGZ7gxTlIVIZqFEvgSx1DcZKFh3K-KvEWxe-syBWi9rsQ490DAHQ~LwAp0dCDtgRG~KM-MNS3u10LWW7zr6zAJBwQBfkIfTEPvLW70zRDXFGPbSjJzI6f7ksqJ8II7UY8ZJNQh4a7cYaLWfU2WWW4CqCMTKg~Q0m33OuV2NJ-iGY-tdvnLhAA__" alt="Tacos">
+        <img src="https://media-hosting.imagekit.io//cf048a919eff4086/dima-solomin-VZKaJ2tIW_U-unsplash.jpg?Expires=1831903655&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MrqjwADt4zt~91V1rKWyC4TCP21urZ5gsMPnYbYWnoXTjoBamsN5u0BzYgc3JkMf2wqLydbkx9v1oVBmIe~9-EHa9R0ffMq~6zNK8lvxjTZq66f16e3C2DJMxMfoC9Uquzxad4EMyzmPeAkIn0sYxUTwU-VmkY8FYPkkEHdZkuojh99XuYWiLpS9mRsEv5LWphzuybT2iKziyiyijn~hpe8FXE9Ecl-X28Ec4StDfzQwaMOMav7ncLX~fzAlj5FUDC6d-SlH~2dPGseZcyOymJxu3S3nKK9jfzRLUEm~4E8wrW6QA7Q03oFXHWW~x1sZxBSVcP~2OZ1aQANy1s2KTg__" alt="Pudding">
+    </div>
+
+    <!-- Recipe Categories -->
+    <div class="recipe-categories">
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//22c93fb984044569/anna-pelzer-IGfIGP5ONV0-unsplash.jpg?Expires=1835455673&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=r6zw6P6GvbBa0cSxOuBq8CSPYvjsSLWFqd~ecCOyAuf9XBDppxRFfOU-4XuKmqNhsNBlDFthdAaxo9o4kw8etOW46zRT-YphqTEh0J5K6bzgP~SKRqvQF5vVtMBpUAPKatshiqnxS~6mK1Z6FFUOPJSKgzZkFTa1e0F5zqujGXpC3bN3LPSuKL8eAdpnOW06q4d34d-dllLBphpqfr75wqUtcCsGU7rZNlER96gKW91Xa8uzoBDVym2fbwFZYR0KZwCiXT3C-IjA4sIYfHhz9t-XC9bXp2-Nw8lQmsRl-bAiwdEuwrAM4O45TI9~H4CBqtWVog8U7~Iw9plYa2ZXGw__" alt="Quick and Easy">
+            <div>QUICK AND EASY</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//df79e8fab86f42b5/victoria-shes-UC0HZdUitWY-unsplash.jpg?Expires=1835455747&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TOeuy~ZJrVPQFiY2A9WI1~z193v2khGyRWxArvXs1v5nITcC7haJRcqGfLIgAU3iuVE01mI-izjgBw6k0tJutd8clbu5ZUBOfvy3l79ZkWNscwCeKs3ruKF3LdSnEnG~npHsUI-d567A7p-cJLdO48UxQ09sEpgz0hHEvcQoZ~qYgyDAsuRetzDUKYL3bXXu1TZ1BcZuWxAEAJyFzNeD-gDbBeO2CVexuyL8DtmYMyyP~7lZeg60SKwYXpwXRthXsyJgTeqaELnGz002NLcUpVeKe~JluCkAzxzdbip~cRqbWlXSzDu1lzexwVVWqPlUaEI32zpJGa12crPCzkuIVQ__" alt="Dinner">
+            <div>DINNER</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//b5f9348778a447f4/chad-montano-MqT0asuoIcU-unsplash.jpg?Expires=1835455797&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ptZe3AdE~0FZUz20wnKEEcCANM6xLyUUzI4mrfPngU5atci6nQ6LhrTih003BzTX0mroPnItnlZ-utEMlsxU2wYzOTmrHfuEeuyP1RL9vQ1GLtZ9-Rk4RNlunOoHtM0DpSlNLUdR4~JG4eUUhKIgSSSDPKwiD-3gQ9mPvpYNDON9DOhMo-J14YJWanp5JjH5Yg8DLL~b5~c4B9LY1DXiGUqQ-9z9ifr0X-7YTNQLsjFGj3PL16SYMn-l0t3Qow9vvTNdogMitbS-odO-BQm-8VzGX~mN-g1DL0stQPZDIfycN6YB4Ve1VFaX94swtIo7w7y-4LWk1ooj~7CbSy6-fw__" alt="Vegetarian">
+            <div>VEGETARIAN</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//3705ec2d793b4638/brooke-lark-HlNcigvUi4Q-unsplash.jpg?Expires=1835455862&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HMxo1u-PT12PM-~S0OnBHPCpOAkpjs2KHn~Zn5uXSnAEBTahz8vO1mpDB75qgKrYmKRB17y8WPRU3PgqsdoiftVGN1s4TrGHGt1q~f2mto0PhLuPlHkmQ5uWXFkv26nsObNFHge5Kj9Kk4KvUmYEBSU6gyUzlQMEdfqj4FC6E-CRKQx2nhSZg6kd7LA9kYFhYFLIZXYwopNp-BjrvfOBZZACx84U0mMaC47oJ11~Cq1mDHgCwYQxoW3E-llvAuZi8eD13ruSNZggxJMzzeFj56Qt~eImaQY~QdkJ-DBNNonuZTaeCBd146uIrmjkqNLVn7GYHUqQbhfTTMW14TvLiw__" alt="Healthy">
+            <div>HEALTHY</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//4adb2f13218b4527/odiseo-castrejon-xPPoMWL4r_A-unsplash.jpg?Expires=1835456406&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0kY4F7i9hORFzmwIYXdhBbd9~7AcuCsWhVdBRMc48gDGetkoofQNumjpD3R-SH3NA9Bm-DM5vVn9vP6w2arD2nxEw96tGw9PTcZKR02i71aGU1eOq6fJ1bYmkUZ-rt5boEvz3BD5pjsuEs1EMG~qzCqcSVY~EBIfF8JlLbsa~S4f6zlI3ErKRQhluCcaPiibXl34Y-fvcAUGoPsScREHOPdUOGpE6LSFknACoxntv0JyKUtt466gfo6p1A52LF959aSa7iyQSaeJIbfRXCL4deV1KGHMpWpdWzxJW6HsqGIG4-CNeQn6Ja2DOw06KUNv5P07d4ukDdBVGd7rv15B3g__" alt="Instant Pot">
+            <div>INSTANT POT</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//760b904a464d4f83/max-griss-cToNEm70cvE-unsplash.jpg?Expires=1835456488&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJNJEeF1T2OANa0fLiKyZQ5bk31FKzdBrik4RU0kE3nUfuRwbYPOUiD88nu6zVZAdSqkbsLzD7BmvSuIZLMG~CiNm6UHS2cVkS2XtAgh4SyK5vQHqi~kL1D2Om8JDKYbE2G~3m66cT3olBE4747jkL1kb5y49ZAr5OZYHkSM~3tXAb4AC021jR8JxJmHvn40BqbKtkSETtoFkjYzqdZptvUQEAkiAZRl1bFwQKYyJpUV8kMhbbMKkKCnHoi9EPBSVXNczY-WsX4H1ema4VSmE221QIrOQamVQPPHfMqpp-A3iTApMWeYyhiP36QrAIbBr9WzSvaVtVFedw7qtahToQ__" alt="Vegan">
+            <div>SOUPS</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//b550794a0d644891/nadine-primeau-l5Mjl9qH8VU-unsplash.jpg?Expires=1835456586&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xKvSK-chDZV-2I99A1u~Rv0SrZ1o2gU71qUzcNYtssUK0mD-mWFJttSIQ9Ajxo2zNbUH-V3XrXugs6aR5h1iv4Rn2dzLYLBWy2-MxlaYrq9wsny6JAUMNddD7-Dw~n2AN~uQ1Uiukj8fK7AHdFlIMK0CwSMpyHxBdZfWl-U1Vm6oH0vh5wH8bq0t6LPjllwJnOk8n45HRN2H9wAZvt0LehWoxmG8ykOV5LlMScqnpPcO9Nrvim-TiEwp~PeVRTITFOmXEU~KC3XzyV47EGTuHi2oZ1tM2YzxFglwNrKcTmKDHqgt30xulfXolqF14wGVJdy-RpV6Z1GU9tMUd95CnQ__" alt="Meal Prep">
+            <div>VEGAN</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//581f546bbadc4d71/kim-deachul-NOAzwcMzZJA-unsplash.jpg?Expires=1835456845&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JEE5zcidwlM0LUlwFDSI673a1OBy1-RU8tRKtV7ZPl-r9NObFX76CjBzhcaWDqGPMGGSABlhryNDSBjK6f4jICmy4MXKDxdq8hNJ51KuohtAVVUh7Y55pH7fk4mSi9C7E5uY9CmPfFKnUydP7iCuDzMuWpCJbyNgGT7zjUTvTU-ce1kfzpSi~5CRpi5w5JfYRVf2LpG1r~dRCguK6VK2KF6ntrWI9pF6eFCm~2F-RFUSNPWoE2gQWr~P8PvqfgW0nRwO4cr~nchCQErNXrnA5r0WjLNYA-HJy45K0geGIEToknvpNSHQLYUGpLla5RDB1OCCn9s-bMLOTlrLL8f-Lw__" alt="Soups">
+            <div>MEAL PREP</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//968684d5edec4127/tania-melnyczuk-xeTv9N2FjXA-unsplash.jpg?Expires=1835456887&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ei4BSPIh7Wc-gLjzPjPmsyRt2XlW5RnBhHkRUVTnFFaBnGC1dlMFs~Ysyu8jkJ53kqCGlwDO2tek86Qt8EbhbsNkPeHI6nAZDU97JngGl8AZvRNfRQLetGp4BCBwvNChvEK6sGuAN0Z-ZG4QZczGHHC2orkyb05dxwK1hlcdoe0A~WnAb33WUezMhVJl1N7KakJXUwVO4xWG5DvTWISoevp4QiCntspqOm3n-QsV6IfTGuf4epEfPGjPtkI-WHYQ71owNg5yug~OtdGexHloVNqysA70Pw68FXPr1ayHrHdgc5wD461QPLuJMC61jjWeL8iQqnp9-lv4LnDDLtteFw__" alt="Salad">
+            <div>SALADS</div>
+        </div>
+        <div class="category">
+            <img src="https://media-hosting.imagekit.io//4bec8f78bafb4d7d/alex-munsell-Yr4n8O_3UPc-unsplash.jpg?Expires=1835456669&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rheUlUcHn3evExu~Wylj7yuZHoN~t3OVq1fXXkjqGwB5d1aMBqq1Kze6Ny1J-VaLWRvIhx822O18GpRRa3XmcRt7ePLYCFJMWMg75Ek7A~sLRVAMT6PqEB1jsROds-Q0sf3aPYTFAxb48vz0Kv0VRjGZJrUTgWX5VG8okNoKe2TmurcfHxhrH9ZhkWupTI5xiWj8etAs3Je5QQBB0StOogUl5dZdC642ZRJ4WYjrVIsSuka~Qokjq~0CfVIV-qLGgGnP58ocfR45X2pG7Y4TECK-Hpf9joZGi0UAM5LP37Dno9Gps4q4loUkx6D88INJLIgKWK3GUQjRA~cekxNxfg__" alt="Non-Veg">
+            <div>NON VEG</div>
+        </div>
+        
+    </div>
+
+    <!-- Search Bar Section -->
+    <div class="search-section">
+        <div class="search-bar">
+            <span>🔍</span>
+            <input type="text" placeholder="Search our recipes">
+        </div>
+        <button class="view-all-btn" onclick="window.location.href='/viewall'">+ VIEW ALL RECIPES</button>
+        
+    </div>
+
+</body>
+</html>
